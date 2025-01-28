@@ -9,15 +9,15 @@ class GlobalAppBar extends StatelessWidget {
     super.key,
     required this.title,
     this.isBackIc = true,
-    this.centerTitle,
     this.backColor,
+    this.leading,
     this.notiOnTap,
     this.actions
   });
   final String title;
   final Color? backColor;
   final bool? isBackIc;
-  final bool? centerTitle;
+  final Widget? leading;
   final Function()? notiOnTap;
   final List<Widget>? actions;
 
@@ -26,14 +26,14 @@ class GlobalAppBar extends StatelessWidget {
     return AppBar(
       backgroundColor: backColor ?? ColorRes.primaryColor,
       automaticallyImplyLeading: false,
-      leading: isBackIc == true ? IconButton(
+      leading: leading ?? (isBackIc == true ? IconButton(
         splashRadius: 0.1,
-        icon: const Icon(Icons.arrow_back, color: ColorRes.white, size: 22),
+        icon: const Icon(Icons.arrow_back, color: ColorRes.white),
         onPressed: (){
           Get.back();
         },
-      ) : const SizedBox.shrink(),
-      centerTitle: centerTitle,
+      ) : const SizedBox.shrink()),
+      centerTitle: true,
       title: GlobalText(
         str: title,
         color: ColorRes.white,

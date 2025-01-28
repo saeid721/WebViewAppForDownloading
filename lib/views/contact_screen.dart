@@ -5,14 +5,14 @@ import '../global/constants/colors_resources.dart';
 import '../global/widget/global_app_bar.dart';
 import '../global/widget/global_text.dart';
 
-class ContactUsScreen extends StatefulWidget {
-  const ContactUsScreen({super.key});
+class ContactScreen extends StatefulWidget {
+  const ContactScreen({super.key});
 
   @override
-  State<ContactUsScreen> createState() => _ContactUsScreenState();
+  State<ContactScreen> createState() => _ContactScreenState();
 }
 
-class _ContactUsScreenState extends State<ContactUsScreen> {
+class _ContactScreenState extends State<ContactScreen> {
 
   // Updated function to open the correct Google Map location
   Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {

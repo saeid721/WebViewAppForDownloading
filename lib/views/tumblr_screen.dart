@@ -35,7 +35,7 @@ class _TumblrScreenState extends State<TumblrScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://saulibrary.edu.bd/'),
+        Uri.parse('https://allinonedownloader.com/'),
       );
   }
 
@@ -47,7 +47,7 @@ class _TumblrScreenState extends State<TumblrScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Tumblr',
         ),
       ),
       body: Stack(
