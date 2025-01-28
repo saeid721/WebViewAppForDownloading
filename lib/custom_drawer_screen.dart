@@ -26,7 +26,7 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
   List<GlobalMenuModel> menuItem = [
     GlobalMenuModel(img: Images.homeInc, text: 'হোম'),
     GlobalMenuModel(img: Images.contactInc, text: 'যোগাযোগ'),
-    GlobalMenuModel(img: Images.userInc, text: 'প্রোফাইল'),
+    // GlobalMenuModel(img: Images.userInc, text: 'প্রোফাইল'),
     GlobalMenuModel(img: Images.notificationInc, text: 'নোটিফিকেশন'),
     GlobalMenuModel(img: Images.share, text: 'শেয়ার করুন'),
     GlobalMenuModel(img: Images.rating, text: 'রেটিং দিন'),
@@ -51,7 +51,8 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
             Container(
               width: Get.width,
               color: ColorRes.primaryColor,
-              padding: const EdgeInsets.only(left: 20, right: 10, top: 60, bottom: 20),
+              padding: const EdgeInsets.only(
+                  left: 20, right: 10, top: 60, bottom: 20),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
                 child: GlobalText(
@@ -68,7 +69,8 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
               child: SizedBox(
                 child: ListView.builder(
                     itemCount: menuItem.length,
-                    padding: const EdgeInsets.symmetric(vertical: 20, horizontal: 20),
+                    padding: const EdgeInsets.symmetric(
+                        vertical: 20, horizontal: 20),
                     shrinkWrap: true,
                     itemBuilder: (ctx, index) {
                       return GestureDetector(
@@ -85,29 +87,32 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                               Get.to(() => const ContactScreen());
                               break;
                             case 2:
-                              Get.to(() => const ProfileScreen());
-                              break;
-                            case 3:
                               Get.to(() => const NotificationScreen());
                               break;
-                            case 4:
-                              _shareApp();  // Trigger share app function
+                            case 3:
+                              _shareApp(); // Trigger share app function
                               break;
-                            case 5:
+                            case 4:
                               // Add any action for Rating here
                               break;
-                            case 6:
+                            case 5:
                               Get.to(() => const PrivacyPolicyScreen());
+                              break;
+                            case 6:
+                              Get.to(() => const ProfileScreen());
                               break;
                           }
                         },
                         child: Container(
                           width: Get.width,
                           margin: const EdgeInsets.only(bottom: 5),
-                          padding: const EdgeInsets.symmetric(vertical: 14, horizontal: 10),
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 14, horizontal: 10),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
-                            color: isClick == index ? ColorRes.primaryColor : Colors.white,
+                            color: isClick == index
+                                ? ColorRes.primaryColor
+                                : Colors.white,
                           ),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
@@ -117,12 +122,16 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                                 height: 20,
                                 width: 20,
                                 fit: BoxFit.fill,
-                                color: isClick == index ? Colors.white : ColorRes.primaryColor,
+                                color: isClick == index
+                                    ? Colors.white
+                                    : ColorRes.primaryColor,
                               ),
                               const SizedBox(width: 10),
                               GlobalText(
                                 str: menuItem[index].text,
-                                color: isClick == index ? ColorRes.white : ColorRes.black,
+                                color: isClick == index
+                                    ? ColorRes.white
+                                    : ColorRes.black,
                                 fontSize: 16,
                                 fontWeight: FontWeight.w400,
                                 fontFamily: 'Rubik',

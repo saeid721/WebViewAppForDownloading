@@ -13,9 +13,9 @@ class ContactScreen extends StatefulWidget {
 }
 
 class _ContactScreenState extends State<ContactScreen> {
-
   // Updated function to open the correct Google Map location
-  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
+  Future<void> _openGoogleMap(
+      BuildContext context, String instituteName, String address) async {
     final query = Uri.encodeComponent('$instituteName, $address');
     final geoUri = Uri.parse("https://maps.app.goo.gl/UJJd5rWAGyswYZvA6");
 
@@ -160,39 +160,39 @@ class _ContactScreenState extends State<ContactScreen> {
                 fontWeight: FontWeight.w400,
                 textAlign: TextAlign.justify,
               ),
-              const SizedBox(height: 20),// Google Maps Section
-              GestureDetector(
-                onTap: () => _openGoogleMap(
-                  context,
-                  "Central Library (SAU)",
-                  "Sher-e-Bangla Nagar, Dhaka, Bangladesh",
-                ),
-                child: Container(
-                  padding: const EdgeInsets.all(16.0),
-                  decoration: BoxDecoration(
-                    color: ColorRes.primaryColor.withOpacity(0.1),
-                    border: Border.all(color: ColorRes.primaryColor),
-                    borderRadius: BorderRadius.circular(8.0),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Icon(
-                        Icons.map_outlined,
-                        color: ColorRes.primaryColor,
-                      ),
-                      const SizedBox(width: 8),
-                      GlobalText(
-                        str: "View University Location on Google Maps",
-                        color: ColorRes.primaryColor,
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                        textAlign: TextAlign.center,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              const SizedBox(height: 20), // Google Maps Section
+              // GestureDetector(
+              //   onTap: () => _openGoogleMap(
+              //     context,
+              //     "Central Library (SAU)",
+              //     "Sher-e-Bangla Nagar, Dhaka, Bangladesh",
+              //   ),
+              //   child: Container(
+              //     padding: const EdgeInsets.all(16.0),
+              //     decoration: BoxDecoration(
+              //       color: ColorRes.primaryColor.withOpacity(0.1),
+              //       border: Border.all(color: ColorRes.primaryColor),
+              //       borderRadius: BorderRadius.circular(8.0),
+              //     ),
+              //     child: Row(
+              //       mainAxisAlignment: MainAxisAlignment.center,
+              //       children: [
+              //         const Icon(
+              //           Icons.map_outlined,
+              //           color: ColorRes.primaryColor,
+              //         ),
+              //         const SizedBox(width: 8),
+              //         GlobalText(
+              //           str: "View University Location on Google Maps",
+              //           color: ColorRes.primaryColor,
+              //           fontSize: 16,
+              //           fontWeight: FontWeight.bold,
+              //           textAlign: TextAlign.center,
+              //         ),
+              //       ],
+              //     ),
+              //   ),
+              // ),
             ],
           ),
         ),

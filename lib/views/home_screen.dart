@@ -1,7 +1,6 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:webview_downloader/views/snapchat_screen.dart';
 import '../custom_drawer_screen.dart';
 import '../global/constants/colors_resources.dart';
 import '../global/constants/images.dart';
@@ -14,18 +13,12 @@ import 'pinterest_screen.dart';
 import 'threads_screen.dart';
 import 'twitter_screen.dart';
 import 'vimeo_screen.dart';
-import 'we_chat_screen.dart';
 import 'tiktok_screen.dart';
-import 'contact_screen.dart';
 import 'instagram_screen.dart';
-import 'whatsapp_screen.dart';
 import 'tumblr_screen.dart';
-import 'quora_screen.dart';
-import 'qq_screen.dart';
 import 'facebook_screen.dart';
 import 'toutube_thumbnail_screen.dart';
 import 'reddit_screen.dart';
-import 'telegram_screen.dart';
 import 'youtube_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -152,7 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   );
                 }).toList(),
               ),
-              const SizedBox(height: 10),
+              const SizedBox(height: 8),
 
               GridView.builder(
                   itemCount: menuItem.length,
@@ -162,7 +155,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       crossAxisCount: 2,
                       mainAxisSpacing: 8,
                       crossAxisSpacing: 8,
-                      mainAxisExtent: 80),
+                      mainAxisExtent: 77),
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   itemBuilder: (ctx, index) {
                     return GestureDetector(
@@ -228,8 +221,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         }
                       },
                       child: HomeMenuWidget(
-                        //height: 40,
-                        width: 60,
+                        height: 38,
+                        //width: 40,
                         maxLines: 1,
                         imagePath: menuItem[index].img,
                         text: menuItem[index].text,
@@ -238,7 +231,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     );
                   }),
 
-              const SizedBox(height: 20),
+              //const SizedBox(height: 10),
             ],
           ),
         ),

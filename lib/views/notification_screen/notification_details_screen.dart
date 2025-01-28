@@ -6,7 +6,8 @@ class NotificationDetailsScreen extends StatefulWidget {
   const NotificationDetailsScreen({super.key});
 
   @override
-  State<NotificationDetailsScreen> createState() => _NotificationDetailsScreenState();
+  State<NotificationDetailsScreen> createState() =>
+      _NotificationDetailsScreenState();
 }
 
 class _NotificationDetailsScreenState extends State<NotificationDetailsScreen> {
@@ -34,12 +35,12 @@ class _NotificationDetailsScreenState extends State<NotificationDetailsScreen> {
           child: Column(
             children: [
               NotificationDetailsWidget(
-                title: "ফেনীবাসীর জন্য বিশেষ বার্তা",
+                title: "Lorem Ipsum is simply dummy text",
                 time: "10:30am",
                 date: "05/01/2025",
-                imagePath: 'assets/images/01.jpg',
+                imagePath: 'assets/images/1.png',
                 details:
-                    "ফেনীর সকল প্রিয় নাগরিকদের জানাই আন্তরিক শুভেচ্ছা। যারা তাদের ব্যবসা বা প্রতিষ্ঠানের প্রসার ও প্রচারের কথা ভাবছেন, তাদের জন্য একটি দুর্দান্ত সুযোগ নিয়ে এসেছে ফেনী সিটি অ্যাপ। ডিজিটাল মার্কেটিং এর আধুনিক সুবিধার মাধ্যমে আপনি সহজেই আপনার পণ্য বা প্রতিষ্ঠানের ব্র্যান্ডকে মানুষের কাছে পরিচিত করতে পারেন এবং আস্থা তৈরি করতে পারেন।",
+                    """Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.""",
               ),
             ],
           ),
