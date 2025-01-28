@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:webview_downloader/views/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
-import '../../global/widget/custom_app_bar.dart';
-import '../../global/widget/custom_bottom_navigation_bar.dart';
 import '../global/widget/global_app_bar.dart';
 
 class LinkedInScreen extends StatefulWidget {
@@ -39,7 +35,7 @@ class _LinkedInScreenState extends State<LinkedInScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://academic.oup.com/oxford-scholarship-online'),
+        Uri.parse('https://publer.com/tools/linkedin-video-downloader'),
       );
   }
 
@@ -50,7 +46,7 @@ class _LinkedInScreenState extends State<LinkedInScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Linkedin',
         ),
       ),
       body: Stack(

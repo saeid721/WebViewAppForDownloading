@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'global/constants/colors_resources.dart';
 import 'global/constants/enum.dart';
 import 'global/widget/global_image_loader.dart';
@@ -10,7 +11,7 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(const Duration(seconds: 3), () {
+    Future.delayed(const Duration(seconds: 5), () {
       Navigator.of(context).pushReplacement(
         MaterialPageRoute(builder: (context) => const HomeScreen()),
       );
@@ -29,57 +30,35 @@ class SplashScreen extends StatelessWidget {
         ),
         child: Stack(
           children: [
-            // Background Shapes
-            Positioned(
-              top: -50,
-              left: -50,
-              child: Container(
-                width: 150,
-                height: 150,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.2),
-                ),
-              ),
-            ),
-            Positioned(
-              bottom: -60,
-              right: -60,
-              child: Container(
-                width: 200,
-                height: 200,
-                decoration: BoxDecoration(
-                  shape: BoxShape.circle,
-                  color: Colors.white.withOpacity(0.2),
-                ),
-              ),
-            ),
 
             // Center Content with Card
             Center(
               child: Container(
                 padding: const EdgeInsets.all(15),
                 margin: const EdgeInsets.symmetric(horizontal: 10),
+                width: Get.width,
+                height: 250,
                 decoration: BoxDecoration(
                   color: Colors.white.withOpacity(0.1),
                   borderRadius: BorderRadius.circular(20),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.black.withOpacity(0.2),
+                      color: ColorRes.primaryColor.withOpacity(0.2),
                       blurRadius: 10,
                       offset: const Offset(0, 5),
                     ),
                   ],
                 ),
                 child: Column(
-                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
 
                     // App Logo
                     Hero(
                       tag: 'app_logo',
                       child: GlobalImageLoader(
-                        imagePath: 'assets/images/app_logo.png',
+                        imagePath: 'assets/images/logo.png',
                         width: 120,
                         height: 120,
                         imageFor: ImageFor.asset,
@@ -89,9 +68,9 @@ class SplashScreen extends StatelessWidget {
 
                     // App Name
                     const GlobalText(
-                      str: 'WebView App for Downloading',
-                      color: Colors.white,
-                      fontSize: 16,
+                      str: 'All In One Downloader',
+                      color: ColorRes.white,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
                       textAlign: TextAlign.center,
                       fontFamily: 'Rubik',
@@ -120,17 +99,6 @@ class SplashScreen extends StatelessWidget {
                       fontStyle: FontStyle.italic,
                     ),
 
-                    const SizedBox(height: 20),
-
-                    // Custom Loading Indicator
-                    SizedBox(
-                      width: 40,
-                      height: 40,
-                      child: CircularProgressIndicator(
-                        valueColor: AlwaysStoppedAnimation<Color>(Colors.white),
-                        strokeWidth: 3,
-                      ),
-                    ),
                   ],
                 ),
               ),

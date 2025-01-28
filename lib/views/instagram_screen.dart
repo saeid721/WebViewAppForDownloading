@@ -39,7 +39,7 @@ class _InstagramScreenState extends State<InstagramScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://saulibrary.edu.bd/daatj/thesis_search_iframe.php'),
+        Uri.parse('https://fastdl.app/en'),
       );
   }
 
@@ -50,7 +50,7 @@ class _InstagramScreenState extends State<InstagramScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Instagram',
         ),
       ),
       body: Stack(

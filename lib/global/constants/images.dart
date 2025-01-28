@@ -10,13 +10,14 @@ class Images {
 
 
   //::::::::::::::::::::::::: Splash Img
-  static const String appLogo = 'assets/images/app_logo.png';
+  static const String appLogo = 'assets/images/logo.png';
 
   static const String facebookInc = 'assets/images/1.png';
   static const String tikTokInc = 'assets/images/2.png';
   static const String instagramInc = 'assets/images/3.png';
   static const String linkedInInc = 'assets/images/4.png';
   static const String threadsInc = 'assets/images/13Download.png';
+  static const String vimeoInc = 'assets/images/5.png';
   static const String pinterestInc = 'assets/images/5.png';
   static const String twitterInc = 'assets/images/66.png';
   static const String youTubeInc = 'assets/images/7.png';

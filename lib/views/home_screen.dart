@@ -12,6 +12,7 @@ import 'linkedin_screen.dart';
 import 'pinterest_screen.dart';
 import 'threads_screen.dart';
 import 'twitter_screen.dart';
+import 'vimeo_screen.dart';
 import 'we_chat_screen.dart';
 import 'tiktok_screen.dart';
 import 'contact_screen.dart';
@@ -38,11 +39,12 @@ class _HomeScreenState extends State<HomeScreen> {
     GlobalMenuModel(img: Images.facebookInc, text: 'Facebook'),
     GlobalMenuModel(img: Images.tikTokInc, text: 'TikTok'),
     GlobalMenuModel(img: Images.instagramInc, text: 'Instagram'),
-    GlobalMenuModel(img: Images.linkedInInc, text: 'LinkedIn'),
+    GlobalMenuModel(img: Images.linkedInInc, text: 'Linkedin'),
     GlobalMenuModel(img: Images.threadsInc, text: 'Threads'),
     GlobalMenuModel(img: Images.twitterInc, text: 'Twitter'),
     GlobalMenuModel(img: Images.youTubeInc, text: 'YouTube'),
     GlobalMenuModel(img: Images.youTubeInc, text: 'YouTube', subText: 'Thumbnail'),
+    GlobalMenuModel(img: Images.vimeoInc, text: 'Vimeo'),
     GlobalMenuModel(img: Images.pinterestInc, text: 'Pinterest'),
     GlobalMenuModel(img: Images.redditInc, text: 'Reddit'),
     GlobalMenuModel(img: Images.tumblrInc, text: 'Tumblr'),
@@ -72,7 +74,7 @@ class _HomeScreenState extends State<HomeScreen> {
       appBar: PreferredSize(
           preferredSize: const Size.fromHeight(60),
           child: GlobalAppBar(
-            title: 'WebView App for Downloading',
+            title: 'All In One Downloader',
             isBackIc: false,
             centerTitle: true,
             notiOnTap: () {},
@@ -176,34 +178,37 @@ class _HomeScreenState extends State<HomeScreen> {
                               Get.to(() => const YouTubeThumbnailScreen());
                               break;
                             case 8:
+                              Get.to(() => const VimeoScreen());
+                              break;
+                            case 9:
                               Get.to(
                                   () => const PinterestScreen());
                               break;
-                            case 9:
+                            case 10:
                               Get.to(() => const RedditScreen());
                               break;
-                            case 10:
+                            case 11:
                               Get.to(() => const TumblrScreen());
                               break;
-                            case 11:
+                            case 12:
                               Get.to(() => const TelegramScreen());
                               break;
-                            case 12:
+                            case 13:
                               Get.to(() => const WhatsAppScreen());
                               break;
-                            case 13:
+                            case 14:
                               Get.to(() => const WeChatScreen());
                               break;
-                            case 14:
+                            case 15:
                               Get.to(() => const SnapchatScreen());
                               break;
-                            case 15:
+                            case 16:
                               Get.to(() => const QuoraScreen());
                               break;
-                            case 16:
+                            case 17:
                               Get.to(() => const QqScreen());
                               break;
-                            case 17:
+                            case 18:
                               Get.to(() => const ContactUsScreen());
                               break;
                           }

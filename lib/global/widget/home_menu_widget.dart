@@ -55,7 +55,7 @@ class HomeMenuWidget extends StatelessWidget {
                 str: text,
                 color: ColorRes.primaryColor,
                 fontSize: 18,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w500,
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
                 maxLines: maxLines ?? 1,

@@ -2,21 +2,23 @@ import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../global/widget/global_app_bar.dart';
 
-class RedditScreen extends StatefulWidget {
-  const RedditScreen({super.key});
+class VimeoScreen extends StatefulWidget {
+  const VimeoScreen({super.key});
 
   @override
-  State<RedditScreen> createState() => _RedditScreenState();
+  State<VimeoScreen> createState() => _VimeoScreenState();
 }
 
-class _RedditScreenState extends State<RedditScreen> {
+class _VimeoScreenState extends State<VimeoScreen> {
   late WebViewController controller;
   var loadingPercentage = 0;
 
   @override
   void initState() {
     super.initState();
+    // Configure WebViewController with JavaScript enabled
     controller = WebViewController()
+      ..setJavaScriptMode(JavaScriptMode.unrestricted) // Enable JavaScript
       ..setNavigationDelegate(NavigationDelegate(
         onPageStarted: (url) {
           setState(() {
@@ -35,7 +37,7 @@ class _RedditScreenState extends State<RedditScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://saulibrary.edu.bd/tigerfed.html'),
+        Uri.parse('https://login.research4life.org/tacgw/AppPortal/'),
       );
   }
 
@@ -56,9 +58,9 @@ class _RedditScreenState extends State<RedditScreen> {
           ),
           loadingPercentage < 100
               ? LinearProgressIndicator(
-            color: Colors.red,
-            value: loadingPercentage / 100.0,
-          )
+                  color: Colors.red,
+                  value: loadingPercentage / 100.0,
+                )
               : Container(),
         ],
       ),

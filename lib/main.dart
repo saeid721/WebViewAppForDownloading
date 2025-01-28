@@ -15,7 +15,7 @@ class SauLibraryApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: ColorRes.lavender),
-      title: 'WebView App for Downloading',
+      title: 'All In One Downloader',
       home: const SplashScreen(),
     );
   }
