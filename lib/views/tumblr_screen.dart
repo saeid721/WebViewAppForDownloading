@@ -4,6 +4,7 @@ import 'package:webview_downloader/views/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../global/widget/custom_app_bar.dart';
 import '../global/widget/custom_bottom_navigation_bar.dart';
+import '../global/widget/global_app_bar.dart';
 
 class TumblrScreen extends StatefulWidget {
   const TumblrScreen({super.key});
@@ -42,16 +43,16 @@ class _TumblrScreenState extends State<TumblrScreen> {
       );
   }
 
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(
-        title: 'Library',
-        onSearchTap: () {
-          // Handle search action
-        },
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: GlobalAppBar(
+          title: 'Facebook',
+        ),
       ),
       body: Stack(
         children: [
@@ -65,13 +66,6 @@ class _TumblrScreenState extends State<TumblrScreen> {
           )
               : Container(),
         ],
-      ),
-
-      bottomNavigationBar: CustomBottomNavigationBar(
-        controller: controller,
-        onHomePressed: () {
-          Get.offAll(HomeScreen());
-        },
       ),
     );
   }

@@ -4,6 +4,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../global/constants/colors_resources.dart';
 import '../global/widget/custom_app_bar.dart';
 import '../global/widget/custom_bottom_navigation_bar.dart';
+import '../global/widget/global_app_bar.dart';
 import '../global/widget/global_text.dart';
 
 class ContactUsScreen extends StatefulWidget {
@@ -14,6 +15,23 @@ class ContactUsScreen extends StatefulWidget {
 }
 
 class _ContactUsScreenState extends State<ContactUsScreen> {
+
+  // Updated function to open the correct Google Map location
+  Future<void> _openGoogleMap(BuildContext context, String instituteName, String address) async {
+    final query = Uri.encodeComponent('$instituteName, $address');
+    final geoUri = Uri.parse("https://maps.app.goo.gl/UJJd5rWAGyswYZvA6");
+
+    if (await canLaunchUrl(geoUri)) {
+      await launchUrl(geoUri, mode: LaunchMode.externalApplication);
+    } else {
+      if (context.mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Unable to open Google Maps app.')),
+        );
+      }
+    }
+  }
+
   Future<void> _sendSMS(String phone) async {
     final Uri smsUri = Uri(scheme: 'sms', path: phone);
     await launchUrl(smsUri);
@@ -31,11 +49,11 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      appBar: CustomAppBar(
-        title: 'Contact',
-        onSearchTap: () {
-          // Handle search action
-        },
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: GlobalAppBar(
+          title: 'Contact',
+        ),
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -144,15 +162,42 @@ class _ContactUsScreenState extends State<ContactUsScreen> {
                 fontWeight: FontWeight.w400,
                 textAlign: TextAlign.justify,
               ),
-              const SizedBox(height: 20),
+              const SizedBox(height: 20),// Google Maps Section
+              GestureDetector(
+                onTap: () => _openGoogleMap(
+                  context,
+                  "Central Library (SAU)",
+                  "Sher-e-Bangla Nagar, Dhaka, Bangladesh",
+                ),
+                child: Container(
+                  padding: const EdgeInsets.all(16.0),
+                  decoration: BoxDecoration(
+                    color: ColorRes.primaryColor.withOpacity(0.1),
+                    border: Border.all(color: ColorRes.primaryColor),
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      const Icon(
+                        Icons.map_outlined,
+                        color: ColorRes.primaryColor,
+                      ),
+                      const SizedBox(width: 8),
+                      GlobalText(
+                        str: "View University Location on Google Maps",
+                        color: ColorRes.primaryColor,
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                        textAlign: TextAlign.center,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
-      ),
-      bottomNavigationBar: CustomBottomNavigationBar(
-        onHomePressed: () {
-          Get.back();
-        },
       ),
     );
   }

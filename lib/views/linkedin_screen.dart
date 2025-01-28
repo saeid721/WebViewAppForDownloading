@@ -4,6 +4,7 @@ import 'package:webview_downloader/views/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../../global/widget/custom_app_bar.dart';
 import '../../global/widget/custom_bottom_navigation_bar.dart';
+import '../global/widget/global_app_bar.dart';
 
 class LinkedInScreen extends StatefulWidget {
   const LinkedInScreen({super.key});
@@ -46,12 +47,11 @@ class _LinkedInScreenState extends State<LinkedInScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(
-        title: 'Online books',
-        onSearchTap: () {
-          // Handle search action
-        },
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: GlobalAppBar(
+          title: 'Facebook',
+        ),
       ),
       body: Stack(
         children: [
@@ -60,18 +60,11 @@ class _LinkedInScreenState extends State<LinkedInScreen> {
           ),
           loadingPercentage < 100
               ? LinearProgressIndicator(
-            color: Colors.red,
-            value: loadingPercentage / 100.0,
-          )
+                  color: Colors.red,
+                  value: loadingPercentage / 100.0,
+                )
               : Container(),
         ],
-      ),
-
-      bottomNavigationBar: CustomBottomNavigationBar(
-        controller: controller,
-        onHomePressed: () {
-          Get.back();
-        },
       ),
     );
   }

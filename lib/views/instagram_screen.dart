@@ -4,6 +4,7 @@ import 'package:webview_downloader/views/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../global/widget/custom_app_bar.dart';
 import '../global/widget/custom_bottom_navigation_bar.dart';
+import '../global/widget/global_app_bar.dart';
 
 class InstagramScreen extends StatefulWidget {
   const InstagramScreen({super.key});
@@ -46,12 +47,11 @@ class _InstagramScreenState extends State<InstagramScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(
-        title: 'e-Theses Search from DAATJ',
-        onSearchTap: () {
-          // Handle search action
-        },
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: GlobalAppBar(
+          title: 'Facebook',
+        ),
       ),
       body: Stack(
         children: [
@@ -65,13 +65,6 @@ class _InstagramScreenState extends State<InstagramScreen> {
           )
               : Container(),
         ],
-      ),
-
-      bottomNavigationBar: CustomBottomNavigationBar(
-        controller: controller,
-        onHomePressed: () {
-          Get.back();
-        },
       ),
     );
   }

@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:webview_downloader/views/home_screen.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 import '../global/widget/custom_app_bar.dart';
 import '../global/widget/custom_bottom_navigation_bar.dart';
+import '../global/widget/global_app_bar.dart';
 
-class QqScreen extends StatefulWidget {
-  const QqScreen({super.key});
+class QuoraScreen extends StatefulWidget {
+  const QuoraScreen({super.key});
 
   @override
-  State<QqScreen> createState() => _QqScreenState();
+  State<QuoraScreen> createState() => _QuoraScreenState();
 }
 
-class _QqScreenState extends State<QqScreen> {
+class _QuoraScreenState extends State<QuoraScreen> {
   late WebViewController controller;
   var loadingPercentage = 0;
 
   @override
   void initState() {
     super.initState();
-    // Configure WebViewController with JavaScript enabled
     controller = WebViewController()
-      ..setJavaScriptMode(JavaScriptMode.unrestricted) // Enable JavaScript
       ..setNavigationDelegate(NavigationDelegate(
         onPageStarted: (url) {
           setState(() {
@@ -39,21 +39,19 @@ class _QqScreenState extends State<QqScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://login.research4life.org/tacgw/AppPortal/'),
+        Uri.parse('https://agora.research4life.org/'),
       );
   }
-
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      resizeToAvoidBottomInset: false,
-      appBar: CustomAppBar(
-        title: 'Online Journals/Books',
-        onSearchTap: () {
-          // Handle search action
-        },
+      appBar: const PreferredSize(
+        preferredSize: Size.fromHeight(60),
+        child: GlobalAppBar(
+          title: 'Facebook',
+        ),
       ),
       body: Stack(
         children: [
@@ -62,18 +60,11 @@ class _QqScreenState extends State<QqScreen> {
           ),
           loadingPercentage < 100
               ? LinearProgressIndicator(
-            color: Colors.red,
-            value: loadingPercentage / 100.0,
-          )
+                  color: Colors.red,
+                  value: loadingPercentage / 100.0,
+                )
               : Container(),
         ],
-      ),
-
-      bottomNavigationBar: CustomBottomNavigationBar(
-        controller: controller,
-        onHomePressed: () {
-          Get.back();
-        },
       ),
     );
   }

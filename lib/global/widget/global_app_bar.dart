@@ -1,41 +1,48 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../constants/colors_resources.dart';
+import 'global_text.dart';
 
-class GlobalAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final String title;
-  final double elevation;
-  final Color backgroundColor;
-  final Color titleColor;
-  final Color iconColor;
 
+class GlobalAppBar extends StatelessWidget {
   const GlobalAppBar({
     super.key,
     required this.title,
-    this.elevation = 1,
-    this.backgroundColor = Colors.white,
-    this.titleColor = ColorRes.primaryColor,
-    this.iconColor = ColorRes.primaryColor,
+    this.isBackIc = true,
+    this.centerTitle,
+    this.backColor,
+    this.notiOnTap,
+    this.actions
   });
+  final String title;
+  final Color? backColor;
+  final bool? isBackIc;
+  final bool? centerTitle;
+  final Function()? notiOnTap;
+  final List<Widget>? actions;
 
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      elevation: elevation,
-      shadowColor: ColorRes.borderColor,
-      backgroundColor: backgroundColor,
-      iconTheme: IconThemeData(color: iconColor),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontSize: 18,
-          fontWeight: FontWeight.w700,
-          color: titleColor,
-        ),
+      backgroundColor: backColor ?? ColorRes.primaryColor,
+      automaticallyImplyLeading: false,
+      leading: isBackIc == true ? IconButton(
+        splashRadius: 0.1,
+        icon: const Icon(Icons.arrow_back, color: ColorRes.white, size: 22),
+        onPressed: (){
+          Get.back();
+        },
+      ) : const SizedBox.shrink(),
+      centerTitle: centerTitle,
+      title: GlobalText(
+        str: title,
+        color: ColorRes.white,
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+        textAlign: TextAlign.center,
+        fontFamily: 'Rubik',
       ),
-      centerTitle: true,
+      actions: actions,
     );
   }
-
-  @override
-  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
 }

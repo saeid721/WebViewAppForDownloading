@@ -18,8 +18,8 @@ import 'contact_screen.dart';
 import 'instagram_screen.dart';
 import 'whatsapp_screen.dart';
 import 'tumblr_screen.dart';
-import 'agora_screen.dart';
-import 'ardi_screen.dart';
+import 'quora_screen.dart';
+import 'qq_screen.dart';
 import 'facebook_screen.dart';
 import 'toutube_thumbnail_screen.dart';
 import 'reddit_screen.dart';
@@ -41,9 +41,9 @@ class _HomeScreenState extends State<HomeScreen> {
     GlobalMenuModel(img: Images.linkedInInc, text: 'LinkedIn'),
     GlobalMenuModel(img: Images.threadsInc, text: 'Threads'),
     GlobalMenuModel(img: Images.twitterInc, text: 'Twitter'),
-    GlobalMenuModel(img: Images.pinterestInc, text: 'Pinterest'),
     GlobalMenuModel(img: Images.youTubeInc, text: 'YouTube'),
     GlobalMenuModel(img: Images.youTubeInc, text: 'YouTube', subText: 'Thumbnail'),
+    GlobalMenuModel(img: Images.pinterestInc, text: 'Pinterest'),
     GlobalMenuModel(img: Images.redditInc, text: 'Reddit'),
     GlobalMenuModel(img: Images.tumblrInc, text: 'Tumblr'),
     GlobalMenuModel(img: Images.telegramInc, text: 'Telegram'),
@@ -67,9 +67,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const GlobalAppBar(
-        title: "WebView App for Downloading",
-      ),
+      backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: false,
+      appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(60),
+          child: GlobalAppBar(
+            title: 'WebView App for Downloading',
+            isBackIc: false,
+            centerTitle: true,
+            notiOnTap: () {},
+          )),
       body: SafeArea(
         child: SingleChildScrollView(
           child: Column(
@@ -136,9 +143,9 @@ class _HomeScreenState extends State<HomeScreen> {
                   physics: const NeverScrollableScrollPhysics(),
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 2,
-                      mainAxisSpacing: 15,
-                      crossAxisSpacing: 15,
-                      mainAxisExtent: 125),
+                      mainAxisSpacing: 8,
+                      crossAxisSpacing: 8,
+                      mainAxisExtent: 80),
                   padding: const EdgeInsets.symmetric(horizontal: 20),
                   itemBuilder: (ctx, index) {
                     return GestureDetector(
@@ -163,14 +170,14 @@ class _HomeScreenState extends State<HomeScreen> {
                               Get.to(() => const TwitterScreen());
                               break;
                             case 6:
-                              Get.to(() => const PinterestScreen());
+                              Get.to(() => const YouTubeScreen());
                               break;
                             case 7:
-                              Get.to(() => const YouTubeScreen());
+                              Get.to(() => const YouTubeThumbnailScreen());
                               break;
                             case 8:
                               Get.to(
-                                  () => const YouTubeThumbnailScreen());
+                                  () => const PinterestScreen());
                               break;
                             case 9:
                               Get.to(() => const RedditScreen());
@@ -202,8 +209,8 @@ class _HomeScreenState extends State<HomeScreen> {
                           }
                         },
                         child: HomeMenuWidget(
-                          height: 40,
-                          width: 40,
+                          //height: 40,
+                          width: 60,
                           maxLines: 1,
                           imagePath: menuItem[index].img,
                           text: menuItem[index].text,
