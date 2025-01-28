@@ -58,9 +58,9 @@ class _HomeScreenState extends State<HomeScreen> {
   final CarouselController buttonCarouselController = CarouselController();
 
   final List<String> sliderImage = [
-    'assets/images/01.jpg',
-    'assets/images/02.jpg',
-    'assets/images/03.jpg',
+    'assets/images/1.png',
+    'assets/images/2.jpg',
+    'assets/images/3.jpg',
   ];
 
   @override
