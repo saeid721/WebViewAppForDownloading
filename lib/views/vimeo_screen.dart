@@ -37,7 +37,7 @@ class _VimeoScreenState extends State<VimeoScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://login.research4life.org/tacgw/AppPortal/'),
+        Uri.parse('https://www.savethevideo.com/vimeo-downloader'),
       );
   }
 
@@ -48,7 +48,7 @@ class _VimeoScreenState extends State<VimeoScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Vimeo',
         ),
       ),
       body: Stack(

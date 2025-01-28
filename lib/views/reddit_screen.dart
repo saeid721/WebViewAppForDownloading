@@ -35,7 +35,7 @@ class _RedditScreenState extends State<RedditScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://saulibrary.edu.bd/tigerfed.html'),
+        Uri.parse('https://rapidsave.com/'),
       );
   }
 
@@ -46,7 +46,7 @@ class _RedditScreenState extends State<RedditScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Reddit',
         ),
       ),
       body: Stack(

@@ -35,7 +35,7 @@ class _YouTubeThumbnailScreenState extends State<YouTubeThumbnailScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://doaj.org/'),
+        Uri.parse('https://youtube-thumbnail-grabber.com/'),
       );
   }
 
@@ -47,7 +47,7 @@ class _YouTubeThumbnailScreenState extends State<YouTubeThumbnailScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'YouTube Thumbnail',
         ),
       ),
       body: Stack(

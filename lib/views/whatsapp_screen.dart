@@ -35,7 +35,7 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://saulibrary.edu.bd/new/download_form.php'),
+        Uri.parse(''),
       );
   }
 
@@ -46,7 +46,7 @@ class _WhatsAppScreenState extends State<WhatsAppScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'WhatsApp',
         ),
       ),
       body: Stack(

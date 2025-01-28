@@ -35,7 +35,7 @@ class _TelegramScreenState extends State<TelegramScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://www.sau.edu.bd/'),
+        Uri.parse('https://getindevice.com/telegram-video-downloader/'),
       );
   }
 
@@ -46,7 +46,7 @@ class _TelegramScreenState extends State<TelegramScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Telegram',
         ),
       ),
       body: Stack(

@@ -35,7 +35,7 @@ class _WeChatScreenState extends State<WeChatScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('http://10.10.0.147/eresources/'),
+        Uri.parse(''),
       );
   }
 
@@ -46,7 +46,7 @@ class _WeChatScreenState extends State<WeChatScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'WeChat',
         ),
       ),
       body: Stack(

@@ -37,7 +37,7 @@ class _QqScreenState extends State<QqScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://login.research4life.org/tacgw/AppPortal/'),
+        Uri.parse('https://catch.tube/help/how-download-tencent-qq-video-com-videos'),
       );
   }
 
@@ -48,7 +48,7 @@ class _QqScreenState extends State<QqScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'QQ',
         ),
       ),
       body: Stack(

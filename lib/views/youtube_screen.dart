@@ -35,7 +35,7 @@ class _YouTubeScreenState extends State<YouTubeScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('http://10.10.0.147/eresources/'),
+        Uri.parse('https://turboscribe.ai/downloader/youtube/video'),
       );
   }
 
@@ -46,7 +46,7 @@ class _YouTubeScreenState extends State<YouTubeScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'YouTube',
         ),
       ),
       body: Stack(

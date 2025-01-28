@@ -35,7 +35,7 @@ class _PinterestScreenState extends State<PinterestScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('http://10.10.0.128/users/sign_in'),
+        Uri.parse('https://pinterestdownloader.com/'),
       );
   }
 

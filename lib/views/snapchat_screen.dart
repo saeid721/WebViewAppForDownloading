@@ -35,7 +35,7 @@ class _SnapchatScreenState extends State<SnapchatScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://app.ithenticate.com/en_us/login'),
+        Uri.parse('https://getindevice.com/snapchat-video-downloader/'),
       );
   }
 
@@ -46,7 +46,7 @@ class _SnapchatScreenState extends State<SnapchatScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'SnapChat',
         ),
       ),
       body: Stack(

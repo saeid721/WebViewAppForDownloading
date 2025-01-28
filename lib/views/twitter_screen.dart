@@ -35,7 +35,7 @@ class _TwitterScreenState extends State<TwitterScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://www.emerald.com/insight/'),
+        Uri.parse('https://twittervideodownloader.com/'),
       );
   }
 
@@ -47,7 +47,7 @@ class _TwitterScreenState extends State<TwitterScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Twitter',
         ),
       ),
       body: Stack(

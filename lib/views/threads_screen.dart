@@ -35,7 +35,7 @@ class _ThreadsScreenState extends State<ThreadsScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://www.jstor.org/'),
+        Uri.parse('https://threadsdownloader.com/'),
       );
   }
 
@@ -46,7 +46,7 @@ class _ThreadsScreenState extends State<ThreadsScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Threads',
         ),
       ),
       body: Stack(

@@ -35,7 +35,7 @@ class _QuoraScreenState extends State<QuoraScreen> {
         },
       ))
       ..loadRequest(
-        Uri.parse('https://agora.research4life.org/'),
+        Uri.parse('https://www.expertstool.com/quora-video-downloader/'),
       );
   }
 
@@ -46,7 +46,7 @@ class _QuoraScreenState extends State<QuoraScreen> {
       appBar: const PreferredSize(
         preferredSize: Size.fromHeight(60),
         child: GlobalAppBar(
-          title: 'Facebook',
+          title: 'Quora',
         ),
       ),
       body: Stack(
