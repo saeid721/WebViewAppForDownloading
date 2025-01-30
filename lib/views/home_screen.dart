@@ -52,7 +52,7 @@ class _HomeScreenState extends State<HomeScreen> {
     GlobalMenuModel(img: Images.tumblrInc, text: 'Tumblr'),
     GlobalMenuModel(img: Images.telegramInc, text: 'Telegram'),
     GlobalMenuModel(img: Images.whatsAppInc, text: 'WhatsApp'),
-    GlobalMenuModel(img: Images.weChatInc, text: 'WeChat'),
+    // GlobalMenuModel(img: Images.weChatInc, text: 'WeChat'),
     GlobalMenuModel(img: Images.snapchatInc, text: 'Snapchat'),
     GlobalMenuModel(img: Images.quoraInc, text: 'Quora'),
     // GlobalMenuModel(img: Images.qqInc, text: 'QQ'),
@@ -208,13 +208,13 @@ class _HomeScreenState extends State<HomeScreen> {
                           case 13:
                             Get.to(() => const WhatsAppScreen());
                             break;
+                          // case 14:
+                          //   Get.to(() => const WeChatScreen());
+                          //   break;
                           case 14:
-                            Get.to(() => const WeChatScreen());
-                            break;
-                          case 15:
                             Get.to(() => const SnapchatScreen());
                             break;
-                          case 16:
+                          case 15:
                             Get.to(() => const QuoraScreen());
                             break;
                           // case 17:
