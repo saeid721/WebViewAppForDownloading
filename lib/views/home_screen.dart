@@ -8,18 +8,18 @@ import '../global/model.dart';
 import '../global/widget/global_app_bar.dart';
 import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
-import 'linkedin_screen.dart';
-import 'pinterest_screen.dart';
-import 'threads_screen.dart';
-import 'twitter_screen.dart';
-import 'vimeo_screen.dart';
-import 'tiktok_screen.dart';
-import 'instagram_screen.dart';
-import 'tumblr_screen.dart';
-import 'facebook_screen.dart';
-import 'toutube_thumbnail_screen.dart';
-import 'reddit_screen.dart';
-import 'youtube_screen.dart';
+import 'downloader_screen/linkedin_screen.dart';
+import 'downloader_screen/pinterest_screen.dart';
+import 'downloader_screen/youtube_thumbnail_screen.dart';
+import 'downloader_screen/youtube_screen.dart';
+import 'downloader_screen/threads_screen.dart';
+import 'downloader_screen/twitter_screen.dart';
+import 'downloader_screen/vimeo_screen.dart';
+import 'downloader_screen/tiktok_screen.dart';
+import 'downloader_screen/instagram_screen.dart';
+import 'downloader_screen/tumblr_screen.dart';
+import 'downloader_screen/facebook_screen.dart';
+import 'downloader_screen/reddit_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -221,8 +221,8 @@ class _HomeScreenState extends State<HomeScreen> {
                         }
                       },
                       child: HomeMenuWidget(
-                        height: 38,
-                        //width: 40,
+                        height: 30,
+                        width: 30,
                         maxLines: 1,
                         imagePath: menuItem[index].img,
                         text: menuItem[index].text,

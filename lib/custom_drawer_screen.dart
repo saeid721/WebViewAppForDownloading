@@ -8,11 +8,10 @@ import '../../../../../global/widget/global_container.dart';
 import '../../../../../global/widget/global_image_loader.dart';
 import '../../../../../global/widget/global_text.dart';
 import '../global/constants/colors_resources.dart';
-import 'views/contact_screen.dart';
+import 'views/contact_screen/contact_screen.dart';
 import 'views/home_screen.dart';
 import 'views/notification_screen/notification_screen.dart';
 import 'views/privacy_policy_screen/privacy_policy_screen.dart';
-import 'views/profile_screen/profile_screen.dart';
 
 class CustomDrawerScreen extends StatefulWidget {
   const CustomDrawerScreen({super.key});
@@ -26,7 +25,6 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
   List<GlobalMenuModel> menuItem = [
     GlobalMenuModel(img: Images.homeInc, text: 'হোম'),
     GlobalMenuModel(img: Images.contactInc, text: 'যোগাযোগ'),
-    // GlobalMenuModel(img: Images.userInc, text: 'প্রোফাইল'),
     GlobalMenuModel(img: Images.notificationInc, text: 'নোটিফিকেশন'),
     GlobalMenuModel(img: Images.share, text: 'শেয়ার করুন'),
     GlobalMenuModel(img: Images.rating, text: 'রেটিং দিন'),
@@ -97,9 +95,6 @@ class _CustomDrawerScreenState extends State<CustomDrawerScreen> {
                               break;
                             case 5:
                               Get.to(() => const PrivacyPolicyScreen());
-                              break;
-                            case 6:
-                              Get.to(() => const ProfileScreen());
                               break;
                           }
                         },
