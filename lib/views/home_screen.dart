@@ -10,6 +10,11 @@ import '../global/widget/global_container.dart';
 import '../global/widget/home_menu_widget.dart';
 import 'downloader_screen/linkedin_screen.dart';
 import 'downloader_screen/pinterest_screen.dart';
+import 'downloader_screen/quora_screen.dart';
+import 'downloader_screen/snapchat_screen.dart';
+import 'downloader_screen/telegram_screen.dart';
+import 'downloader_screen/we_chat_screen.dart';
+import 'downloader_screen/whatsapp_screen.dart';
 import 'downloader_screen/youtube_thumbnail_screen.dart';
 import 'downloader_screen/youtube_screen.dart';
 import 'downloader_screen/threads_screen.dart';
@@ -45,11 +50,11 @@ class _HomeScreenState extends State<HomeScreen> {
     GlobalMenuModel(img: Images.pinterestInc, text: 'Pinterest'),
     GlobalMenuModel(img: Images.redditInc, text: 'Reddit'),
     GlobalMenuModel(img: Images.tumblrInc, text: 'Tumblr'),
-    // GlobalMenuModel(img: Images.telegramInc, text: 'Telegram'),
-    // GlobalMenuModel(img: Images.whatsAppInc, text: 'WhatsApp'),
-    // GlobalMenuModel(img: Images.weChatInc, text: 'WeChat'),
-    // GlobalMenuModel(img: Images.snapchatInc, text: 'Snapchat'),
-    // GlobalMenuModel(img: Images.quoraInc, text: 'Quora'),
+    GlobalMenuModel(img: Images.telegramInc, text: 'Telegram'),
+    GlobalMenuModel(img: Images.whatsAppInc, text: 'WhatsApp'),
+    GlobalMenuModel(img: Images.weChatInc, text: 'WeChat'),
+    GlobalMenuModel(img: Images.snapchatInc, text: 'Snapchat'),
+    GlobalMenuModel(img: Images.quoraInc, text: 'Quora'),
     // GlobalMenuModel(img: Images.qqInc, text: 'QQ'),
     // GlobalMenuModel(img: Images.contactInc, text: 'Contact'),
   ];
@@ -197,21 +202,21 @@ class _HomeScreenState extends State<HomeScreen> {
                           case 11:
                             Get.to(() => const TumblrScreen());
                             break;
-                          // case 12:
-                          //   Get.to(() => const TelegramScreen());
-                          //   break;
-                          // case 13:
-                          //   Get.to(() => const WhatsAppScreen());
-                          //   break;
-                          // case 14:
-                          //   Get.to(() => const WeChatScreen());
-                          //   break;
-                          // case 15:
-                          //   Get.to(() => const SnapchatScreen());
-                          //   break;
-                          // case 16:
-                          //   Get.to(() => const QuoraScreen());
-                          //   break;
+                          case 12:
+                            Get.to(() => const TelegramScreen());
+                            break;
+                          case 13:
+                            Get.to(() => const WhatsAppScreen());
+                            break;
+                          case 14:
+                            Get.to(() => const WeChatScreen());
+                            break;
+                          case 15:
+                            Get.to(() => const SnapchatScreen());
+                            break;
+                          case 16:
+                            Get.to(() => const QuoraScreen());
+                            break;
                           // case 17:
                           //   Get.to(() => const QqScreen());
                           //   break;

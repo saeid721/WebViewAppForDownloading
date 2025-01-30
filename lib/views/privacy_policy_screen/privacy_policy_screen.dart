@@ -25,7 +25,7 @@ class _PrivacyPolicyScreenState extends State<PrivacyPolicyScreen> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(56),
         child: GlobalAppBar(
-          title: 'গোপনীয়তা নীতি',
+          title: 'Privacy & Policy',
           notiOnTap: () {},
         ),
       ),

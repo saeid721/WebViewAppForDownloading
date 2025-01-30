@@ -25,7 +25,7 @@ class _NotificationDetailsScreenState extends State<NotificationDetailsScreen> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(56),
         child: GlobalAppBar(
-          title: 'নোটিফিকেশন',
+          title: 'Notification',
           notiOnTap: () {},
         ),
       ),

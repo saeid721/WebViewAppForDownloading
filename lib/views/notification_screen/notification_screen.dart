@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../global/widget/custom_app_bar.dart';
 import '../../global/widget/global_app_bar.dart';
 import 'components/notification_widget.dart';
 import 'notification_details_screen.dart';
@@ -27,7 +26,7 @@ class _NotificationScreenState extends State<NotificationScreen> {
       appBar: PreferredSize(
         preferredSize: const Size.fromHeight(56),
         child: GlobalAppBar(
-          title: 'নোটিফিকেশন',
+          title: 'Notification',
           notiOnTap: () {},
         ),
       ),
